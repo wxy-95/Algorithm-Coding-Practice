@@ -1,0 +1,25 @@
+//hashSet does not allow duplicate num and does not guarantee any order.
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Solution solution = new Solution();
+	    System.out.println(solution.FindTarget(new int[]{1,2,3,4}, target=12));
+	}
+}
+
+class Solution{
+    public boolean FindTarget(int[] nums, int target){
+        Set<Integer> appeared = new HashSet<>();
+        for (int num: nums){
+            int targetNum = target - num;
+            if(appeared.contains(targetNum)){
+                return true;
+            }
+            appeared.add(num);
+        }
+        return false;
+    }
+}
