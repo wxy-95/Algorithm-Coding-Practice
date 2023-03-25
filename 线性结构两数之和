@@ -1,7 +1,9 @@
-//hashSet does not allow duplicate num and does not guarantee any order.
+【hashSet】 does not allow duplicate num and does not guarantee any order.
 
+【题干1】输入一组数组，从中任意选两个数之和（不能重复使用），如果等于目标数，则输出T，否则输出F。
 import java.util.*;
 
+【解答1】
 public class Main
 {
 	public static void main(String[] args) {
@@ -23,3 +25,13 @@ class Solution{
         return false;
     }
 }
+
+【拓展问题2】输入一组数组，从中任意选两个数之和（能重复使用），如果等于目标数，则输出T，否则输出F。
+【解答2】解答1 的基础上，最开始运行appeared.add(num);即可。
+
+【拓展问题3】输入一组数组，从中任意选三个数之和，如果等于目标数，则输出T，否则输出F。
+【解答3】固定一个数，然后从剩下的数组中找出两个数之和等于目标数减固定数。
+
+【拓展问题4】输入一组已排序好的数组，从中任意选择两个数之和，如果等于目标数，则输出T，否则输出F。
+
+
